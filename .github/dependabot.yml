@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "maven"
+    directory: "/" # or the subdirectory where your pom.xml is located
+    schedule:
+      interval: "weekly" # or "daily", "monthly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore"
+    ignore:
+      - dependency-name: "some-package"
+        versions: ["1.x.x"]
